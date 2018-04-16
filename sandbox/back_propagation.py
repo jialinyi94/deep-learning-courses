@@ -6,6 +6,7 @@
 import numpy as np
 from dnn_utils_v2 import sigmoid, sigmoid_backward, relu, relu_backward
 
+
 # PARAMETER INITIALIZATION
 
 # He et al. (2015)
@@ -195,8 +196,8 @@ def linear_backward(dZ, cache):
     m = A_prev.shape[1]
 
     # START CODE HERE # (≈ 3 lines of code)
-    dW = np.dot(dZ, A_prev.T) / m
-    db = np.sum(dZ, axis=1, keepdims=True) / m
+    dW = np.dot(dZ, A_prev.T)
+    db = np.sum(dZ, axis=1, keepdims=True)
     dA_prev = np.dot(W.T, dZ)
     # END CODE HERE #
 
@@ -266,7 +267,7 @@ def L_model_backward(AL, Y, caches):
 
     # Initializing the backpropagation
     # START CODE HERE # (1 line of code)
-    dAL = - (np.divide(Y, AL) - np.divide(1 - Y, 1 - AL))  # derivative of cost with respect to AL
+    dAL = - (np.divide(Y, AL) - np.divide(1 - Y, 1 - AL)) / m   # derivative of cost with respect to AL
     # END CODE HERE #
 
     # Lth layer (SIGMOID -> LINEAR) gradients. Inputs: "dAL, current_cache". Outputs: "grads["dAL-1"], grads["dWL"], grads["dbL"]
