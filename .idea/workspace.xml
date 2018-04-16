@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4d3abae5-a5f7-4770-ab42-ab0efa03752b" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/sandbox/loss_function.py" afterPath="$PROJECT_DIR$/sandbox/loss_function.py" />
-      <change beforePath="$PROJECT_DIR$/sandbox/why cross entropy.ipynb" afterPath="$PROJECT_DIR$/sandbox/why cross entropy.ipynb" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/sandbox/back_propagation.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/sandbox/dnn_utils_v2.py" />
+      <change beforePath="$PROJECT_DIR$/.idea/deep-learning-courses.iml" afterPath="$PROJECT_DIR$/.idea/deep-learning-courses.iml" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/cs230/1.neural-networks-deep-learning/Building+your+Deep+Neural+Network+-+Step+by+Step+v8.ipynb" afterPath="$PROJECT_DIR$/cs230/1.neural-networks-deep-learning/Building+your+Deep+Neural+Network+-+Step+by+Step+v8.ipynb" />
+      <change beforePath="$PROJECT_DIR$/cs230/1.neural-networks-deep-learning/Deep+Neural+Network+-+Application+v8.ipynb" afterPath="$PROJECT_DIR$/cs230/1.neural-networks-deep-learning/Deep+Neural+Network+-+Application+v8.ipynb" />
+      <change beforePath="$PROJECT_DIR$/cs230/2.deep-neural-network/Initialization/Initialization.ipynb" afterPath="$PROJECT_DIR$/cs230/2.deep-neural-network/Initialization/Initialization.ipynb" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -13,20 +19,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="loss_function.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/sandbox/loss_function.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="855">
-              <caret line="57" column="65" lean-forward="true" selection-start-line="57" selection-start-column="65" selection-end-line="57" selection-end-column="65" />
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -43,11 +36,13 @@
       <find>A1</find>
       <find>loss_grid</find>
       <find>hats</find>
+      <find>###</find>
     </findStrings>
     <replaceStrings>
       <replace>a1</replace>
       <replace>ce_grid`</replace>
       <replace>scores</replace>
+      <replace>#</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -58,14 +53,20 @@
       <list>
         <option value="$PROJECT_DIR$/sandbox/why cross entropy.ipynb" />
         <option value="$PROJECT_DIR$/sandbox/loss_function.py" />
+        <option value="$PROJECT_DIR$/cs230/1.neural-networks-deep-learning/Building+your+Deep+Neural+Network+-+Step+by+Step+v8.ipynb" />
+        <option value="$PROJECT_DIR$/sandbox/dnn_utils_v2.py" />
+        <option value="$PROJECT_DIR$/sandbox/back_propagation.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" fullScreen="true">
     <option name="x" value="40" />
-    <option name="y" value="66" />
+    <option name="y" value="58" />
     <option name="width" value="1400" />
     <option name="height" value="770" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -82,6 +83,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -92,18 +94,50 @@
             <path>
               <item name="deep-learning-courses" type="b2602c69:ProjectViewProjectNode" />
               <item name="deep-learning-courses" type="462c0819:PsiDirectoryNode" />
+              <item name="cs230" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="deep-learning-courses" type="b2602c69:ProjectViewProjectNode" />
+              <item name="deep-learning-courses" type="462c0819:PsiDirectoryNode" />
+              <item name="cs230" type="462c0819:PsiDirectoryNode" />
+              <item name="1.neural-networks-deep-learning" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="deep-learning-courses" type="b2602c69:ProjectViewProjectNode" />
+              <item name="deep-learning-courses" type="462c0819:PsiDirectoryNode" />
+              <item name="cs230" type="462c0819:PsiDirectoryNode" />
+              <item name="2.deep-neural-network" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="deep-learning-courses" type="b2602c69:ProjectViewProjectNode" />
+              <item name="deep-learning-courses" type="462c0819:PsiDirectoryNode" />
+              <item name="cs230" type="462c0819:PsiDirectoryNode" />
+              <item name="2.deep-neural-network" type="462c0819:PsiDirectoryNode" />
+              <item name="Initialization" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="deep-learning-courses" type="b2602c69:ProjectViewProjectNode" />
+              <item name="deep-learning-courses" type="462c0819:PsiDirectoryNode" />
               <item name="sandbox" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="PyConsoleConfigurable.Python Console" />
+  </component>
+  <component name="PyConsoleOptionsProvider">
+    <option name="myPythonConsoleState">
+      <console-settings module-name="deep-learning-courses" is-module-sdk="true">
+        <option name="myUseModuleSdk" value="true" />
+        <option name="myModuleName" value="deep-learning-courses" />
+        <option name="myAddSourceRoots" value="true" />
+      </console-settings>
+    </option>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -159,10 +193,9 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="40" y="66" width="1400" height="770" extended-state="0" />
-    <editor active="true" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24305555" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30833334" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -191,11 +224,17 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/sandbox/loss_function.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file:///anaconda/lib/python3.6/site-packages/matplotlib/axes/_axes.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -209,10 +248,46 @@
     <entry file="file://$PROJECT_DIR$/sandbox/loss_function.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="855">
-          <caret line="57" column="65" lean-forward="true" selection-start-line="57" selection-start-column="65" selection-end-line="57" selection-end-column="65" />
+          <caret line="57" column="65" lean-forward="false" selection-start-line="57" selection-start-column="65" selection-end-line="57" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cs230/1.neural-networks-deep-learning/Building+your+Deep+Neural+Network+-+Step+by+Step+v8.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cs230/1.neural-networks-deep-learning/Deep+Neural+Network+-+Application+v8.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cs230/2.deep-neural-network/Initialization/Initialization.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sandbox/back_propagation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="713">
+          <caret line="293" column="0" lean-forward="true" selection-start-line="293" selection-start-column="0" selection-end-line="293" selection-end-column="0" />
           <folding>
-            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#182#200#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sandbox/dnn_utils_v2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-217">
+          <caret line="23" column="32" lean-forward="true" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="32" />
+          <folding />
         </state>
       </provider>
     </entry>
