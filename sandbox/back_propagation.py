@@ -5,6 +5,7 @@
 
 import numpy as np
 from dnn_utils_v2 import sigmoid, sigmoid_backward, relu, relu_backward
+from testCases_v4 import *
 
 
 # PARAMETER INITIALIZATION
@@ -251,8 +252,10 @@ def L_model_backward(AL, Y, caches):
     AL -- probability vector, output of the forward propagation (L_model_forward())
     Y -- true "label" vector (containing 0 if non-cat, 1 if cat)
     caches -- list of caches containing:
-                every cache of linear_activation_forward() with "relu" (it's caches[l], for l in range(L-1) i.e l = 0...L-2)
-                the cache of linear_activation_forward() with "sigmoid" (it's caches[L-1])
+                every cache of linear_activation_forward() with "relu"
+                    (it's caches[l], for l in range(L-1) i.e l = 0...L-2)
+                the cache of linear_activation_forward() with "sigmoid"
+                    (it's caches[L-1])
 
     Returns:
     grads -- A dictionary with the gradients
@@ -270,7 +273,8 @@ def L_model_backward(AL, Y, caches):
     dAL = - (np.divide(Y, AL) - np.divide(1 - Y, 1 - AL)) / m   # derivative of cost with respect to AL
     # END CODE HERE #
 
-    # Lth layer (SIGMOID -> LINEAR) gradients. Inputs: "dAL, current_cache". Outputs: "grads["dAL-1"], grads["dWL"], grads["dbL"]
+    # Lth layer (SIGMOID -> LINEAR) gradients. Inputs: "dAL, current_cache".
+    # Outputs: "grads["dAL-1"], grads["dWL"], grads["dbL"]
     # START CODE HERE # (approx. 2 lines)
     current_cache = caches[L - 1]
     grads["dA" + str(L - 1)], grads["dW" + str(L)], grads["db" + str(L)] = linear_activation_backward(dAL,
@@ -281,7 +285,8 @@ def L_model_backward(AL, Y, caches):
     # Loop from l=L-2 to l=0
     for l in reversed(range(L - 1)):
         # lth layer: (RELU -> LINEAR) gradients.
-        # Inputs: "grads["dA" + str(l + 1)], current_cache". Outputs: "grads["dA" + str(l)] , grads["dW" + str(l + 1)] , grads["db" + str(l + 1)]
+        # Inputs: "grads["dA" + str(l + 1)], current_cache".
+        # Outputs: "grads["dA" + str(l)] , grads["dW" + str(l + 1)] , grads["db" + str(l + 1)]
         # START CODE HERE # (approx. 5 lines)
         current_cache = caches[l]
         dA_prev_temp, dW_temp, db_temp = linear_activation_backward(grads["dA" + str(l + 1)], current_cache, "relu")
@@ -292,3 +297,17 @@ def L_model_backward(AL, Y, caches):
 
     return grads
 
+
+if __name__ == "__main__":
+
+    # Compute cost
+    Y, AL = compute_cost_test_case()
+    print("cost = " + str(compute_cost(AL, Y)))
+
+    # Back propagation
+    AL, Y_assess, caches = L_model_backward_test_case()
+    grads = L_model_backward(AL, Y_assess, caches)
+    print_grads(grads)
+    # dA1 is half of the one in Ng's tutorial since his dA1 is the derivatives of the batch cost,
+    # whereas my dA1 is the derivatives of the average cost across over all samples.
+    # Two dA's are equal up to a constant number --- the number of the samples.
