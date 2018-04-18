@@ -1,7 +1,9 @@
 import numpy as np
-from mpl_toolkits.mplot3d import axes3d
+from mpl_toolkits.mplot3d import Axes3D
 import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
+from matplotlib.ticker import LinearLocator, FormatStrFormatter
+from pylab import meshgrid, cm, imshow, contour, clabel, colorbar, axis, title, show
 
 
 def get_data(samples):
@@ -36,15 +38,13 @@ def cross_entropy(w1, w2):
 def hinge_loss(w1, w2):
     inputs, labels = get_data(100)
     scores = nn_model(w1, w2, inputs)
-    loss = 1 - np.multiply(2*labels-1, scores)
+    loss = 1 - np.multiply(2 * labels - 1, scores)
     loss[loss < 0] = 0
     return np.sum(loss) / 100
 
 
-n = 50
-m = 80
-w1_list = np.linspace(-5, 5, n)
-w2_list = np.linspace(-5, 5, m)
+w1_list = np.arange(-4, 4, 0.1)
+w2_list = np.arange(-5, 5, 0.1)
 
 w1_grid, w2_grid = np.meshgrid(w1_list, w2_list)
 
@@ -52,14 +52,15 @@ ce_grid = np.zeros(w1_grid.shape)
 sq_grid = np.zeros(w1_grid.shape)
 hg_grid = np.zeros(w1_grid.shape)
 
-for i in range(m):
+for i in range(len(w2_list)):
     for j in range(len(w1_grid[i])):
         ce_grid[i][j] = cross_entropy(w1_grid[i][j], w2_grid[i][j])
         sq_grid[i][j] = square_loss(w1_grid[i][j], w2_grid[i][j])
         hg_grid[i][j] = hinge_loss(w1_grid[i][j], w2_grid[i][j])
 
-fig = plt.figure()
-ax = fig.add_subplot(111, projection='3d')
+# Comparison plot
+compare_fig = plt.figure()
+ax = compare_fig.gca(projection='3d')
 
 # Plot a basic wireframe.
 ax.plot_wireframe(w1_grid, w2_grid, ce_grid, rstride=10, cstride=10, colors='k')
@@ -73,3 +74,23 @@ hinge_loss_patch = mpatches.Patch(color='g', label='Hinge Loss')
 plt.legend(handles=[cross_entropy_patch, square_loss_patch, hinge_loss_patch])
 
 plt.show()
+
+# 3D plot
+cross_entropy_fig = plt.figure()
+ax = cross_entropy_fig.gca(projection='3d')
+surf = ax.plot_surface(w1_grid, w2_grid, ce_grid, rstride=1, cstride=1,
+                       cmap=cm.RdBu, linewidth=0, antialiased=False)
+ax.zaxis.set_major_locator(LinearLocator(10))
+ax.zaxis.set_major_formatter(FormatStrFormatter('%.02f'))
+
+cross_entropy_fig.colorbar(surf, shrink=0.5, aspect=5)
+
+plt.show()
+
+# Contour plot
+plt.figure()
+# adding the Contour lines with labels
+cset = contour(w1_grid, w2_grid, ce_grid, 6, colors='k')
+clabel(cset, inline=True, fontsize=8)
+title('contour of cross entropy')
+show()
